@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*============================================================
+                    NAVEGAÇÃO
+============================================================*/
+
+.topnav {
+    overflow: hidden;
+    background-color: #362E26;
+    position: fixed;
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 550px;
+    z-index: 10;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.topnav a:hover {
+    color: rgb(199, 233, 210);
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/*============================================================
+                    TEXTO PARALAX
+============================================================*/
+
+.parallax {
+    background-image: url("img/img-parallax2.jpg");
+    width: 100%;
+    min-height: 900px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tittleparallax {
+    font-family: 'Cookie';
+    font-size: 17vh;
+    text-align: center;
+    color: #FFFFFF;
+    stroke: #b3abab;
+}
+
+.subtittle {
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+    line-height: 2;
+
+
+}
+
+/*============================================================
+                            SVG
+============================================================*/
+
+.divsvg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+svg {
+    width: 150px;
+    height: 50px;
+    padding: 0 1px 1px 0;
+}
+
+/*============================================================
+                    SEGUNDA PARALAX
+============================================================*/
+
+section {
+    width: 100%;
+    height: 460px;
+    background-color: #E78585;
+    background-image: url("img/fundo.png");
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.containerparallax_two {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tittle_two {
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 550px;
+    color: #FFFEFE;
+    font-size: 28px;
+}
+
+.subtittle_two {
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    width: 550px;
+    height: 269px;
+    color: #FFFEFE;
+    font-size: 15px;
+    line-height: 1.4em;
+}
+
+.tittle_tree {
+    font-size: 3vh;
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1;
+}
+
+.my_p {
+    text-align: center;
+    font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #605e5e;
+}
+
+.divflavor {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+img {
+    align-self: center;
+}
+
+/*============================================================
+                    SOBRE O DONO DA LOJA
+============================================================*/
+
+#about {
+    width: 100%;
+    height: 660px;
+    background-image: url("img/fundo3.webp");
+    background-color: #70BABE;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.who_make {
+    font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    color: white;
+    width: 395px;
+    height: 55px;
+    font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+
+}
+
+.my_p_2 {
+    width: 395px;
+    height: 300px;
+    font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: white;
+}
+
+.creator_image {
+    background-image: url(img/creator.webp);
+    width: 450px;
+    height: 450px;
+    display: block;
+}
+
+.column_who_left {
+    flex-direction: column;
+    align-items: center;
+}
+
+/*============================================================
+                    SLIDE DE SABORES
+============================================================*/
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 400px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 450px;
+}
+
+/*============================================================
+            FOOTER E TODOS OS SEUS ELEMENTOS
+============================================================*/
+
+.footer {
+    width: 100%;
+    height: 450px;
+    background-color: #362E26;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.container_contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.container_social_media {
+    width: 128px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+.facebook {
+    
+    background-image: url("img/facebook.png");
+    width: 26px;
+    height: 26px;
+}
+
+.instagram {
+    
+    background-image: url("img/instagram.png");
+    width: 26px;
+    height: 26px;
+}
+
+.pinterest {
+    
+    background-image: url("img/pinterst.png");
+    width: 26px;
+    height: 26px;
+}
+
+.twitter {
+    
+    background-image: url("img/twitter.png");
+    width: 26px;
+    height: 26px;
+}
+
+.text_waiting_your_contact {
+    font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    color: #FFFEFE;
+    
+}
+
+.text_contact {
+    font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #FFFEFE;
+}
+
+
+form {
+    width: 505px;
+    height: 290px;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    display: inline-block;
+    background-color: #514539;
+    box-sizing: border-box;
+    color: white;
+}
+
+input[type=submit] {
+    width: 100px;
+    background-color: #514539;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #8d8a87;
+}
+
+textarea {
+    background-color: #514539;
+}
